@@ -20,6 +20,10 @@ app.mount('#app');
 
 // Второй эксземпляр Vue
 const app2 = Vue.createApp({
+  template: `
+    <h2>Second App</h2>
+    <p>{{ favoriteFruit }}</p>
+  `,
   data() {
     return {
       favoriteFruit: 'Banana'
