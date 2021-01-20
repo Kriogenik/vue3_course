@@ -1,7 +1,7 @@
-# Learn VueJS 3
+# Изучаем VueJS 3
 
-This repository contains examples to help learn **VueJS 3**
+Этот репозиторий содержит примеры для изучения **VueJS 3**
 
-All examples and tasks are based on the course [Vue - The Complete Guide (w/ Router, Vuex, Composition API)](https://www.udemy.com/course/vuejs-2-the-complete-guide/) by [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/)
+Все примеры и задания основы на курсе [Vue - The Complete Guide (w/ Router, Vuex, Composition API)](https://www.udemy.com/course/vuejs-2-the-complete-guide/) от [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/)
 
-I have collected all examples for my personal convenience, but you can also use these examples.
+Я собрал коллекцию всех примеров для моего личного пользования, но вы также можете использовать их в своих целях.
