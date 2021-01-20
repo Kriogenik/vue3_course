@@ -1,3 +1,4 @@
+// Первый экземпляр Vue
 const app = Vue.createApp({
   data() {
     return {
@@ -17,6 +18,16 @@ const app = Vue.createApp({
 
 app.mount('#app');
 
+// Второй эксземпляр Vue
+const app2 = Vue.createApp({
+  data() {
+    return {
+      favoriteFruit: 'Banana'
+    }
+  }
+});
+
+app2.mount('#app2');
 
 /* Погружение в реактивность Vue */
 
