@@ -15,9 +15,40 @@ const app = Vue.createApp({
       this.message = this.$refs.userText.value;
     },
   },
+  // Жизненный цикл экземпляра Vue
+  beforeCreate() {
+    console.log('beforeCreate()');
+  },
+  created() {
+    console.log('created()');
+  },
+  beforeMount() {
+    console.log('beforeMount()');
+  },
+  mounted() {
+    console.log('mounted()');
+  },
+  beforeUpdate() {
+    console.log('beforeUpdate()');
+  },
+  updated() {
+    console.log('updated()');
+  },
+  beforeUnmount() {
+    console.log('beforeUnmount()');
+  },
+  unmounted() {
+    console.log('unmounted()');
+  }
 });
 
 app.mount('#app');
+
+/* Функция с задержкой в 3 сек. для ликвидации
+экземпляра Vue */
+setTimeout(function () {
+  app.unmount();  
+}, 3000);
 
 // Второй эксземпляр Vue
 const app2 = Vue.createApp({
@@ -33,6 +64,7 @@ const app2 = Vue.createApp({
 });
 
 app2.mount('#app2');
+
 
 /* Погружение в реактивность Vue */
 
@@ -61,4 +93,4 @@ console.log(proxy.longMessage);
 /* Новое значение для свойства message
 и вывод результата в консоль */
 proxy.message = 'Hello!!!!';
-console.log(proxy.longMessage);
+// console.log(proxy.longMessage);
