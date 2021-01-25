@@ -5,8 +5,16 @@
 		</header>
 		<ul>
 			<li>
-				<friend-contact></friend-contact>
-				<friend-contact></friend-contact>
+				<friend-contact
+					name="Viktor Ivanov"
+					phone-number="8987 264 2354"
+					email-address="viktor@localhost.com"
+				></friend-contact>
+				<friend-contact
+					name="Maxim Petrov"
+					phone-number="8941 846 1234"
+					email-address="maxim@localhost.com"
+				></friend-contact>
 			</li>
 		</ul>
 	</section>
