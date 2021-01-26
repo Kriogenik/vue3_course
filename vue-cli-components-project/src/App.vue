@@ -9,11 +9,13 @@
 					name="Viktor Ivanov"
 					phone-number="8987 264 2354"
 					email-address="viktor@localhost.com"
+					is-favorite="1"
 				></friend-contact>
 				<friend-contact
 					name="Maxim Petrov"
 					phone-number="8941 846 1234"
 					email-address="maxim@localhost.com"
+					is-favorite="0"
 				></friend-contact>
 			</li>
 		</ul>
