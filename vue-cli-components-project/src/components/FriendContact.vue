@@ -12,8 +12,10 @@
 	
 <script>
 export default {
+	/* Варианты записей входных параметров */
 	// props: ['name', 'phoneNumber', 'emailAddress', 'isFavorite'],
 	props: {
+		// Пример валидации входных параметров
 		id: {
 			type: String,
 			required: true
@@ -35,12 +37,15 @@ export default {
 			required: false,
 			default: false
 			// validator: function(value) {
+			// 	// Валидация через строчный параметр
 			// 	return value === '1' || value === '0';
 			// }
 		}
 	},
+	/* Варианты записей пользовательских событий */
 	// emits: ['toggle-favorite'],
 	emits: {
+		// Валидация пользовательского события
 		'toggle-favorite': function(id) {
 			if (id) {
 				return true;
@@ -60,11 +65,14 @@ export default {
       this.detailsIsVisible = !this.detailsIsVisible;
 		},
 		toggleFavorite() {
+			// Переключение и присваивание строчного параметра для валидации
 			// if (this.friendIsFavorite === '1') {
 			// 	this.friendIsFavorite = '0'
 			// } else {
 			// 	this.friendIsFavorite = '1'
 			// }
+
+			// Переключение через пользовательское событие
 			this.$emit('toggle-favorite', this.id);
 		}
 	}
