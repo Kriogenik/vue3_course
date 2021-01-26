@@ -1,6 +1,6 @@
 <template>
 	<li>
-		<h2>{{ name }} {{ friendIsFavorite ? '(Favorite)' : ''}}</h2>
+		<h2>{{ name }} {{ isFavorite ? '(Favorite)' : ''}}</h2>
 		<button @click="toggleFavorite">Toggle Favorite</button>
 		<button @click="toggleDetails">{{ detailsIsVisible ? 'Hide' : 'Show'}} Details</button>
 		<ul v-if="detailsIsVisible">
@@ -14,6 +14,10 @@
 export default {
 	// props: ['name', 'phoneNumber', 'emailAddress', 'isFavorite'],
 	props: {
+		id: {
+			type: String,
+			required: true
+		},
 		name: {
 			type: String,
 			required: true
@@ -37,15 +41,12 @@ export default {
 	},
 	data() {
 		return {
-			detailsIsVisible: false,
-      /* Добавляем новое свойство для изменения
-			значения (состояния), полученного из props */
-			friendIsFavorite: this.isFavorite
+			detailsIsVisible: false
 		};
 	},
 	methods: {
 		toggleDetails() {
-      this.detailsIsVisible = !this.detailsIsVisible
+      this.detailsIsVisible = !this.detailsIsVisible;
 		},
 		toggleFavorite() {
 			// if (this.friendIsFavorite === '1') {
@@ -53,7 +54,7 @@ export default {
 			// } else {
 			// 	this.friendIsFavorite = '1'
 			// }
-			this.friendIsFavorite = !this.friendIsFavorite
+			this.$emit('toggle-favorite', this.id);
 		}
 	}
 };
