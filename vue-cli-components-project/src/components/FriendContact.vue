@@ -1,6 +1,6 @@
 <template>
 	<li>
-		<h2>{{ name }} {{ isFavorite === '1' ? '(Favorite)' : ''}}</h2>
+		<h2>{{ name }} {{ friendIsFavorite === '1' ? '(Favorite)' : ''}}</h2>
 		<button @click="toggleFavorite">Toggle Favorite</button>
 		<button @click="toggleDetails">{{ detailsIsVisible ? 'Hide' : 'Show'}} Details</button>
 		<ul v-if="detailsIsVisible">
@@ -26,7 +26,10 @@ export default {
 				name: 'Viktor Ivanov',
 				phone: '8987 264 2354',
 				email: 'viktor@localhost.com'
-      }
+			},
+			/* Добавляем новое свойство для изменения
+			значения (состояния), полученного из props */
+			friendIsFavorite: this.isFavorite
 		};
 	},
 	methods: {
@@ -34,10 +37,10 @@ export default {
       this.detailsIsVisible = !this.detailsIsVisible
 		},
 		toggleFavorite() {
-			if (this.isFavorite === '1') {
-				this.isFavorite = '0'
+			if (this.friendIsFavorite === '1') {
+				this.friendIsFavorite = '0'
 			} else {
-				this.isFavorite = '1'
+				this.friendIsFavorite = '1'
 			}
 		}
 	}
