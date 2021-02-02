@@ -7,6 +7,8 @@
 			<li><strong>Phone:</strong> {{ phoneNumber }}</li>
 			<li><strong>Email:</strong> {{ emailAddress }}</li>
 		</ul>
+		<!-- Удаление контакта -->
+		<button @click="$emit('delete', id)">Delete</button>
 	</li>
 </template>
 	
@@ -43,18 +45,18 @@ export default {
 		}
 	},
 	/* Варианты записей пользовательских событий */
-	// emits: ['toggle-favorite'],
-	emits: {
-		// Валидация пользовательского события
-		'toggle-favorite': function(id) {
-			if (id) {
-				return true;
-			} else {
-				console.warn('ID is missing');
-				return false;
-			}
-		}
-	},
+	emits: ['toggle-favorite', 'delete'],
+	// emits: {
+	// 	// Валидация пользовательского события
+	// 	'toggle-favorite': function(id) {
+	// 		if (id) {
+	// 			return true;
+	// 		} else {
+	// 			console.warn('ID is missing');
+	// 			return false;
+	// 		}
+	// 	}
+	// },
 	data() {
 		return {
 			detailsIsVisible: false
