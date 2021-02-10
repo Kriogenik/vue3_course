@@ -1,6 +1,8 @@
 <template>
   <div>
     <the-header></the-header>
+    <!-- Альтернативный вызов компонента -->
+    <!-- <TheHeader /> -->
     <badge-list></badge-list>
     <user-info
       :full-name="activeUser.name"
@@ -15,7 +17,9 @@ import TheHeader from './components/TheHeader.vue';
 
 export default {
   components: {
-    'the-header': TheHeader
+    'the-header': TheHeader,
+    // Альтернативный способ объявления
+    // TheHeader: TheHeader
   },
   data() {
     return {
