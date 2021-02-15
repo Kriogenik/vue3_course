@@ -5,8 +5,8 @@ module.exports = {
 	},
 	projects: [
 		{
-			root: './',
-			package: './cmp-adv/package.json'
+			root: './cmp-adv/',
+			package: './package.json'
 		}
 	]
 }
