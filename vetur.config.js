@@ -7,6 +7,10 @@ module.exports = {
 		{
 			root: './cmp-adv/',
 			package: './package.json'
+		},
+		{
+			root: './forms/',
+			package: './package.json'
 		}
 	]
 }
