@@ -88,6 +88,10 @@
         <label for="how-other">Other</label>
       </div>
     </div>
+    <div class="form-control">
+      <input type="checkbox" id="confirm-terms" name="confirm-terms" v-model="confirm" />
+      <label for="confirm-terms">Agree to terms of use?</label>
+    </div>
     <div>
       <button>Save Data</button>
     </div>
@@ -102,7 +106,8 @@ export default {
       userAge: null,
       referrer: 'wom',
       interest: [],
-      how: null
+      how: null,
+      confirm: false
     }
   },
   methods: {
@@ -125,6 +130,9 @@ export default {
       // Radio
       console.log('Radio buttons: ' + this.how);
       this.how = null;
+      // Confirm
+      console.log('Confirm? ' + this.confirm);
+      this.confirm = false;
     }
   }
 }
